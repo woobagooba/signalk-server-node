@@ -1,0 +1,37 @@
+{
+  "vessel": 
+  {
+    "name": "WoobaGooba",
+    "uuid": "8675309"
+  },
+  "pipedProviders": 
+   [
+     {
+       "id": "n2k-from-can0",
+       "pipeElements": 
+       [
+         {
+           "type": "providers/execute",
+           "options": 
+            {
+              "command": "candump can0 | candump2analyzer"
+            }
+         },
+         {
+           "type": "providers/liner"
+         },
+         {
+           "type": "providers/n2kAnalyzer"
+         },
+         {
+          "type": "providers/n2k-signalk"
+         }
+       ]
+     }
+   ],
+  "interfaces":{
+    "bower": true,
+    "rest": true,
+    "ws": true
+  }
+}
